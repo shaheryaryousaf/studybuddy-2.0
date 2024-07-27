@@ -1,10 +1,18 @@
 .hide-sm {
-    display: block;
-  }
+  display: block !important;
+}
 
-  .hide-bg{
-    display: none;
-  }
+.hide-bg {
+  display: none !important;
+}
+
+.content-body{
+    padding: 50px 20px;
+}
+
+.content-body h5{
+    font-weight: 600;
+}
 
 /* ========================== */
 /* Header */
@@ -71,4 +79,34 @@ nav .dropdown .dropdown-menu {
   border: black;
   color: #f3f3f3;
   padding: 0px;
+}
+
+/* ========================== */
+/* Topics List */
+/* ========================== */
+.topics_list {
+  border: none;
+  margin-top: 30px;
+}
+
+.topics_list li {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.topics_list li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.topics_list li span{
+    background-color: #eef5fc;
+    color: #333;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
 }

@@ -1,16 +1,20 @@
 @media only screen and (max-width: 600px) {
   .hide-sm {
-    display: none;
+    display: none !important;
   }
 
-  .hide-bg{
-    display: block;
+  .hide-bg {
+    display: block !important;
   }
 
-   /* ========================== */
+  .content-body{
+    padding: 30px 15px;
+  }
+
+  /* ========================== */
   /* Navbar */
   /* ========================== */
-  nav ul{
+  nav ul {
     padding: 0px;
     margin: 0px;
   }
@@ -19,17 +23,17 @@
     margin-bottom: 10px;
   }
 
-  nav ul li:last-child{
+  nav ul li:last-child {
     margin-bottom: 0px;
   }
 
-  nav ul li a{
+  nav ul li a {
     color: white;
     text-decoration: none;
   }
 
   .navbar-toggler,
-  .navbar-toggler-icon{
+  .navbar-toggler-icon {
     color: white !important;
   }
 
@@ -40,5 +44,38 @@
     width: auto !important;
     margin-left: 0px;
     margin-top: 10px;
+  }
+
+  /* ========================== */
+  /* Topics List SM */
+  /* ========================== */
+  .topics_list_sm button {
+    background-color: #7633f9 !important;
+  }
+
+  .topics_list_sm .dropdown-menu {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .topics_list_sm .dropdown-menu li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 15px;   
+    font-size: 14px;
+  }
+
+  .topics_list_sm .dropdown-menu li span {
+    background-color: #eef5fc;
+    color: #333;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  .topics_list_sm .dropdown-item {
+    margin: 0px;
+    padding: 0px;
   }
 }
