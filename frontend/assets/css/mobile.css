@@ -1,0 +1,44 @@
+@media only screen and (max-width: 600px) {
+  .hide-sm {
+    display: none;
+  }
+
+  .hide-bg{
+    display: block;
+  }
+
+   /* ========================== */
+  /* Navbar */
+  /* ========================== */
+  nav ul{
+    padding: 0px;
+    margin: 0px;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  nav ul li:last-child{
+    margin-bottom: 0px;
+  }
+
+  nav ul li a{
+    color: white;
+    text-decoration: none;
+  }
+
+  .navbar-toggler,
+  .navbar-toggler-icon{
+    color: white !important;
+  }
+
+  /* ========================== */
+  /* Search Form */
+  /* ========================== */
+  .search_form {
+    width: auto !important;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+}

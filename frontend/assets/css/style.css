@@ -1,0 +1,74 @@
+.hide-sm {
+    display: block;
+  }
+
+  .hide-bg{
+    display: none;
+  }
+
+/* ========================== */
+/* Header */
+/* ========================== */
+nav {
+  background-color: #7633f9 !important;
+  padding: 15px !important;
+}
+
+nav .navbar-brand {
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+nav .dropdown .dropdown-toggle {
+  color: white;
+  cursor: pointer;
+}
+
+nav .dropdown .dropdown-menu {
+  margin-top: 10px;
+}
+
+/* ========================== */
+/* Search Styles */
+/* ========================== */
+::placeholder {
+  color: #c7cbd1 !important;
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: #c7cbd1 !important;
+}
+
+.form-control:focus {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  background-color: black;
+}
+
+/* ========================== */
+/* Search Form */
+/* ========================== */
+.search_form {
+  border: 1px solid #411c8c;
+  background-color: #411c8c;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-left: 50px;
+  width: 400px;
+}
+
+.search_form .fa-solid {
+  color: #f3f3f3;
+}
+
+.search_form .form-control,
+.search_form .form-control:focus,
+.search_form .form-control:active {
+  background-color: #411c8c;
+  border: black;
+  color: #f3f3f3;
+  padding: 0px;
+}
