@@ -6,12 +6,17 @@
   display: none !important;
 }
 
-.content-body{
-    padding: 50px 20px;
+.content-body {
+  padding: 50px 20px;
+  background-color: #fdfbfb;
 }
 
-.content-body h5{
-    font-weight: 600;
+.content-body h5 {
+  font-weight: 600;
+}
+
+a{
+  text-decoration: none !important;
 }
 
 /* ========================== */
@@ -96,6 +101,7 @@ nav .dropdown .dropdown-menu {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  background-color: #fdfbfb;
 }
 
 .topics_list li a {
@@ -103,10 +109,62 @@ nav .dropdown .dropdown-menu {
   color: #333;
 }
 
-.topics_list li span{
-    background-color: #eef5fc;
-    color: #333;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 12px;
+.topics_list li span {
+  background-color: #eef5fc;
+  color: #333;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
 }
+
+
+/* ========================== */
+/* Feed */
+/* ========================== */
+.feed_list .single_feed{
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.feed_list .single_feed .title h4 a{
+  color: gray;
+}
+
+.feed_list .single_feed .stats{
+  color: gray;
+  font-size: 14px;
+}
+
+.feed_list .single_feed .stats .cat{
+  background-color: #f3f3f3;
+  padding: 7px 15px;
+  border-radius: 50px;
+}
+
+.feed_list .single_feed .stats .cat a{
+  color: gray;
+}
+
+.feed_list .single_feed .detail{
+  color: gray;
+  margin: 15px 0;
+}
+
+.feed_list .single_feed .meta{
+  margin-bottom: 20px;
+  color: gray;
+  font-size: 14px;
+}
+
+.feed_list .single_feed .meta .user img{
+  border: 2px solid gray;
+  border-radius: 50px;
+}
+
+.feed_list .single_feed .meta .user .name a{
+  font-weight: 600;
+  color: gray;
+}
+
