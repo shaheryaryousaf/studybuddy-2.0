@@ -15,8 +15,28 @@
   font-weight: 600;
 }
 
-a{
+a {
   text-decoration: none !important;
+}
+
+/* ========================== */
+/* Buttons Style */
+/* ========================== */
+.btn .fa-solid {
+  font-size: 14px;
+}
+
+.btn-md {
+  font-size: 15px !important;
+  padding: 7px 15px !important;
+}
+
+/* ========================== */
+/* Page Top */
+/* ========================== */
+.page-top p {
+  color: gray;
+  font-size: 14px;
 }
 
 /* ========================== */
@@ -117,54 +137,53 @@ nav .dropdown .dropdown-menu {
   font-size: 12px;
 }
 
-
 /* ========================== */
 /* Feed */
 /* ========================== */
-.feed_list .single_feed{
+.feed_list .single_feed {
   background-color: white;
   border: 1px solid #eee;
   border-radius: 5px;
   padding: 30px;
+  margin-bottom: 20px;
 }
 
-.feed_list .single_feed .title h4 a{
+.feed_list .single_feed .title h4 a {
   color: gray;
 }
 
-.feed_list .single_feed .stats{
+.feed_list .single_feed .stats {
   color: gray;
   font-size: 14px;
 }
 
-.feed_list .single_feed .stats .cat{
+.feed_list .single_feed .stats .cat {
   background-color: #f3f3f3;
   padding: 7px 15px;
   border-radius: 50px;
 }
 
-.feed_list .single_feed .stats .cat a{
+.feed_list .single_feed .stats .cat a {
   color: gray;
 }
 
-.feed_list .single_feed .detail{
+.feed_list .single_feed .detail {
   color: gray;
   margin: 15px 0;
 }
 
-.feed_list .single_feed .meta{
+.feed_list .single_feed .meta {
   margin-bottom: 20px;
   color: gray;
   font-size: 14px;
 }
 
-.feed_list .single_feed .meta .user img{
+.feed_list .single_feed .meta .user img {
   border: 2px solid gray;
   border-radius: 50px;
 }
 
-.feed_list .single_feed .meta .user .name a{
+.feed_list .single_feed .meta .user .name a {
   font-weight: 600;
   color: gray;
 }
-
