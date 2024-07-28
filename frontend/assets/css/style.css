@@ -22,6 +22,11 @@ a {
 /* ========================== */
 /* Buttons Style */
 /* ========================== */
+.btn-primary{
+  background-color: #7633f9 !important;
+  border-color: #7633f9 !important;
+}
+
 .btn .fa-solid {
   font-size: 14px;
 }

@@ -49,6 +49,10 @@
   /* ========================== */
   /* Topics List SM */
   /* ========================== */
+  .topics_list_sm {
+    margin-bottom: 20px;
+  }
+
   .topics_list_sm button {
     background-color: #7633f9 !important;
   }
