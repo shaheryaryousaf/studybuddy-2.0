@@ -7,7 +7,7 @@
     display: block !important;
   }
 
-  .content-body{
+  .content-body {
     padding: 30px 15px;
   }
 
@@ -35,6 +35,14 @@
   .navbar-toggler,
   .navbar-toggler-icon {
     color: white !important;
+  }
+
+  /* ========================== */
+  /* Profile Top */
+  /* ========================== */
+  .userDetail p {
+    font-size: 15px;
+    color: gray;
   }
 
   /* ========================== */
@@ -66,7 +74,7 @@
   .topics_list_sm .dropdown-menu li {
     display: flex;
     justify-content: space-between;
-    padding: 8px 15px;   
+    padding: 8px 15px;
     font-size: 14px;
   }
 
@@ -81,5 +89,12 @@
   .topics_list_sm .dropdown-item {
     margin: 0px;
     padding: 0px;
+  }
+
+  /* ========================== */
+  /* Feed Style */
+  /* ========================== */
+  .feed_list .single_feed .detail {
+    font-size: 15px;
   }
 }

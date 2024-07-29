@@ -22,7 +22,7 @@ a {
 /* ========================== */
 /* Buttons Style */
 /* ========================== */
-.btn-primary{
+.btn-primary {
   background-color: #7633f9 !important;
   border-color: #7633f9 !important;
 }
@@ -42,6 +42,63 @@ a {
 .page-top p {
   color: gray;
   font-size: 14px;
+}
+
+/* ========================== */
+/* Profile Top */
+/* ========================== */
+.profile_top{
+  margin-bottom: 30px;
+}
+
+.profile_top img{
+  border-radius: 50px;
+  border: 2px solid gray;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.profile_top .userInfo h3{
+  font-weight: 400;
+}
+
+.profile_top .userInfo h6{
+  font-weight: 400;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.profile_top a{
+  border: 2px solid gray;
+  color: gray;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 15px;
+}
+
+/* ========================== */
+/* Listing Meta Style */
+/* ========================== */
+.listing_meta {
+  margin-bottom: 20px;
+  color: gray;
+  font-size: 14px;
+}
+
+.listing_meta .user img {
+  border: 2px solid gray;
+  border-radius: 50px;
+}
+
+.listing_meta .user .name a {
+  font-weight: 600;
+  color: gray;
+}
+
+.listing_meta .user .info {
+  font-size: 12px !important;
 }
 
 /* ========================== */
@@ -177,18 +234,26 @@ nav .dropdown .dropdown-menu {
   margin: 15px 0;
 }
 
-.feed_list .single_feed .meta {
-  margin-bottom: 20px;
-  color: gray;
-  font-size: 14px;
+/* ========================== */
+/* Recent Activity */
+/* ========================== */
+.single_activity .card {
+  border-color: #eee;
+  padding: 10px;
 }
 
-.feed_list .single_feed .meta .user img {
-  border: 2px solid gray;
-  border-radius: 50px;
+.single_activity .card p,
+.single_activity .card a {
+  color: gray;
 }
 
-.feed_list .single_feed .meta .user .name a {
-  font-weight: 600;
-  color: gray;
+.single_activity .card a {
+  font-weight: 500;
+}
+
+.single_activity .card .reply {
+  background-color: #f3f3f3;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
 }
