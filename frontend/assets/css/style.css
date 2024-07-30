@@ -19,6 +19,10 @@ a {
   text-decoration: none !important;
 }
 
+.card {
+  border-color: #eee !important;
+}
+
 /* ========================== */
 /* Buttons Style */
 /* ========================== */
@@ -47,28 +51,28 @@ a {
 /* ========================== */
 /* Profile Top */
 /* ========================== */
-.profile_top{
+.profile_top {
   margin-bottom: 30px;
 }
 
-.profile_top img{
+.profile_top img {
   border-radius: 50px;
   border: 2px solid gray;
   text-align: center;
   margin-bottom: 10px;
 }
 
-.profile_top .userInfo h3{
+.profile_top .userInfo h3 {
   font-weight: 400;
 }
 
-.profile_top .userInfo h6{
+.profile_top .userInfo h6 {
   font-weight: 400;
   color: gray;
   margin-bottom: 20px;
 }
 
-.profile_top a{
+.profile_top a {
   border: 2px solid gray;
   color: gray;
   text-decoration: none;
@@ -87,17 +91,17 @@ a {
   font-size: 14px;
 }
 
-.listing_meta .user img {
+.user img {
   border: 2px solid gray;
   border-radius: 50px;
 }
 
-.listing_meta .user .name a {
+.user .name a {
   font-weight: 600;
   color: gray;
 }
 
-.listing_meta .user .info {
+.user .info {
   font-size: 12px !important;
 }
 
@@ -202,7 +206,7 @@ nav .dropdown .dropdown-menu {
 /* ========================== */
 /* Feed */
 /* ========================== */
-.feed_list .single_feed {
+.single_feed {
   background-color: white;
   border: 1px solid #eee;
   border-radius: 5px;
@@ -210,26 +214,26 @@ nav .dropdown .dropdown-menu {
   margin-bottom: 20px;
 }
 
-.feed_list .single_feed .title h4 a {
+.single_feed .title h4 a {
   color: gray;
 }
 
-.feed_list .single_feed .stats {
+.single_feed .stats {
   color: gray;
   font-size: 14px;
 }
 
-.feed_list .single_feed .stats .cat {
+.single_feed .stats .cat {
   background-color: #f3f3f3;
   padding: 7px 15px;
   border-radius: 50px;
 }
 
-.feed_list .single_feed .stats .cat a {
+.single_feed .stats .cat a {
   color: gray;
 }
 
-.feed_list .single_feed .detail {
+.single_feed .detail {
   color: gray;
   margin: 15px 0;
 }
@@ -258,15 +262,14 @@ nav .dropdown .dropdown-menu {
   margin-top: 10px;
 }
 
-
 /* ========================== */
 /* Form Card */
 /* ========================== */
-.form-card{
+.form-card {
   padding: 20px;
 }
 
-.form-card h3{
+.form-card h3 {
   margin-bottom: 15px;
   font-weight: 400;
 }
@@ -274,17 +277,50 @@ nav .dropdown .dropdown-menu {
 /* ========================== */
 /* Custom Form Styles */
 /* ========================== */
-.custom_form label{
+.custom_form label {
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 5px;
 }
 .custom_form .form-control,
-.custom_form .btn{
+.custom_form .btn {
   padding: 10px !important;
   font-size: 14px !important;
 }
 
-.custom_form .btn{
+.custom_form .btn {
   font-weight: 500;
+}
+
+/* ========================== */
+/* Message Box */
+/* ========================== */
+.messageBox {
+  margin-top: 30px;
+  background-color: #fdfbfb;
+  padding: 20px;
+  margin-top: 15px;
+}
+
+.messageBox .messages {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.messageBox .single_message {
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.messageBox .single_message .message {
+  margin-top: 10px;
+}
+
+.messageBox .form-control,
+.messageBox .form-control:focus,
+.messageBox .form-control:active {
+  padding: 15px;
+  background-color: #eee;
+  border-color: #eee;
+  font-size: 15px;
 }
