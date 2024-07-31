@@ -1,0 +1,326 @@
+.hide-sm {
+  display: block !important;
+}
+
+.hide-bg {
+  display: none !important;
+}
+
+.content-body {
+  padding: 50px 20px;
+  background-color: #fdfbfb;
+}
+
+.content-body h5 {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.card {
+  border-color: #eee !important;
+}
+
+/* ========================== */
+/* Buttons Style */
+/* ========================== */
+.btn-primary {
+  background-color: #7633f9 !important;
+  border-color: #7633f9 !important;
+}
+
+.btn .fa-solid {
+  font-size: 14px;
+}
+
+.btn-md {
+  font-size: 15px !important;
+  padding: 7px 15px !important;
+}
+
+/* ========================== */
+/* Page Top */
+/* ========================== */
+.page-top p {
+  color: gray;
+  font-size: 14px;
+}
+
+/* ========================== */
+/* Profile Top */
+/* ========================== */
+.profile_top {
+  margin-bottom: 30px;
+}
+
+.profile_top img {
+  border-radius: 50px;
+  border: 2px solid gray;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.profile_top .userInfo h3 {
+  font-weight: 400;
+}
+
+.profile_top .userInfo h6 {
+  font-weight: 400;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.profile_top a {
+  border: 2px solid gray;
+  color: gray;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 15px;
+}
+
+/* ========================== */
+/* Listing Meta Style */
+/* ========================== */
+.listing_meta {
+  margin-bottom: 20px;
+  color: gray;
+  font-size: 14px;
+}
+
+.user img {
+  border: 2px solid gray;
+  border-radius: 50px;
+}
+
+.user .name a {
+  font-weight: 600;
+  color: gray;
+}
+
+.user .info {
+  font-size: 12px !important;
+}
+
+/* ========================== */
+/* Header */
+/* ========================== */
+nav {
+  background-color: #7633f9 !important;
+  padding: 15px !important;
+}
+
+nav .navbar-brand {
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+nav .dropdown .dropdown-toggle {
+  color: white;
+  cursor: pointer;
+}
+
+nav .dropdown .dropdown-menu {
+  margin-top: 10px;
+}
+
+/* ========================== */
+/* Search Styles */
+/* ========================== */
+::placeholder {
+  color: #c7cbd1 !important;
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: #c7cbd1 !important;
+}
+
+.form-control:focus {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  background-color: black;
+}
+
+/* ========================== */
+/* Search Form */
+/* ========================== */
+.search_form {
+  border: 1px solid #411c8c;
+  background-color: #411c8c;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-left: 50px;
+  width: 400px;
+}
+
+.search_form .fa-solid {
+  color: #f3f3f3;
+}
+
+.search_form .form-control,
+.search_form .form-control:focus,
+.search_form .form-control:active {
+  background-color: #411c8c;
+  border: black;
+  color: #f3f3f3;
+  padding: 0px;
+}
+
+/* ========================== */
+/* Topics List */
+/* ========================== */
+.topics_list {
+  border: none;
+  margin-top: 30px;
+}
+
+.topics_list li {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: #fdfbfb;
+}
+
+.topics_list li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.topics_list li span {
+  background-color: #eef5fc;
+  color: #333;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+/* ========================== */
+/* Feed */
+/* ========================== */
+.single_feed {
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.single_feed .title h4 a {
+  color: gray;
+}
+
+.single_feed .stats {
+  color: gray;
+  font-size: 14px;
+}
+
+.single_feed .stats .cat {
+  background-color: #f3f3f3;
+  padding: 7px 15px;
+  border-radius: 50px;
+}
+
+.single_feed .stats .cat a {
+  color: gray;
+}
+
+.single_feed .detail {
+  color: gray;
+  margin: 15px 0;
+}
+
+/* ========================== */
+/* Recent Activity */
+/* ========================== */
+.single_activity .card {
+  border-color: #eee;
+  padding: 10px;
+}
+
+.single_activity .card p,
+.single_activity .card a {
+  color: gray;
+}
+
+.single_activity .card a {
+  font-weight: 500;
+}
+
+.single_activity .card .reply {
+  background-color: #f3f3f3;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* ========================== */
+/* Form Card */
+/* ========================== */
+.form-card {
+  padding: 20px;
+}
+
+.form-card h3 {
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+/* ========================== */
+/* Custom Form Styles */
+/* ========================== */
+.custom_form label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.custom_form .form-control,
+.custom_form .btn {
+  padding: 10px !important;
+  font-size: 14px !important;
+}
+
+.custom_form .btn {
+  font-weight: 500;
+}
+
+/* ========================== */
+/* Message Box */
+/* ========================== */
+.messageBox {
+  margin-top: 30px;
+  background-color: #fdfbfb;
+  padding: 20px;
+  margin-top: 15px;
+}
+
+.messageBox .messages {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.messageBox .single_message {
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.messageBox .single_message .message {
+  margin-top: 10px;
+}
+
+.messageBox .form-control,
+.messageBox .form-control:focus,
+.messageBox .form-control:active {
+  padding: 15px;
+  background-color: #eee;
+  border-color: #eee;
+  font-size: 15px;
+}
