@@ -1,0 +1,116 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<!-- Content -->
+<div class="content-body">
+  <div class="container">
+    <div class="row">
+      <!-- Topics List -->
+      <div class="col-lg-3">
+        <div class="hide-sm">
+          <h5>Recent Topics</h5>
+          <ul class="list-group topics_list">
+            <li class="list-group-item"><a href="#">All</a><span>100</span></li>
+            <li class="list-group-item">
+              <a href="#">JavaScript</a><span>25</span>
+            </li>
+            <li class="list-group-item">
+              <a href="#">ReactJS</a><span>25</span>
+            </li>
+            <li class="list-group-item">
+              <a href="#">Python</a><span>25</span>
+            </li>
+            <li class="list-group-item">
+              <a href="#">Machine Learning</a><span>25</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="dropdown topics_list_sm hide-bg">
+          <button
+            class="btn btn-secondary dropdown-toggle w-100"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Recent Topics
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#">Action</a><span>100</span>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">JavaScript</a><span>25</span>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">ReactJS</a><span>25</span>
+            </li>
+            <li><a class="dropdown-item" href="#">Python</a><span>25</span></li>
+            <li>
+              <a class="dropdown-item" href="#">Machine Learning</a
+              ><span>25</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Feed -->
+      <div class="col-lg-6">
+        <div class="profile_top text-center">
+          <img
+            src="{% static 'images/avatar.png' %}"
+            alt="profile photo"
+            width="100px"
+            class="img-fluid"
+          />
+          <div class="userInfo">
+            <h3>John Wick</h3>
+            <h6>@JohnWick</h6>
+          </div>
+          <div class="profileLink">
+            <a href="{% url 'update-profile' %}">Edit Profile</a>
+          </div>
+        </div>
+
+        <div class="userDetail">
+          <h5>About</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+            possimus dolorem odit ipsa laborum sed rerum dolorum, voluptates
+            quis? Quidem eius nesciunt hic minima debitis odio ea voluptatem
+            possimus tempora.
+          </p>
+        </div>
+
+        <div class="feed_list">
+          <!-- Single Feed -->
+          {% include 'components/rooms/singleRoom.html' %}
+          <!-- Single Feed -->
+          {% include 'components/rooms/singleRoom.html' %}
+          <!-- Single Feed -->
+          {% include 'components/rooms/singleRoom.html' %}
+        </div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="col-lg-3">
+        <div class="activity">
+          <h5>Recent Activity</h5>
+
+          <!-- Single Activity -->
+          {% include 'components/rooms/activityItem.html' %}
+
+          <!-- Single Activity -->
+          {% include 'components/rooms/activityItem.html' %}
+
+          <!-- Single Activity -->
+          {% include 'components/rooms/activityItem.html' %}
+
+          <!-- Single Activity -->
+          {% include 'components/rooms/activityItem.html' %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

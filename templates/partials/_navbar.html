@@ -22,13 +22,13 @@
             </form>
           </li>
           <li class="hide-bg">
-            <a href="profile.html">Profile</a>
+            <a href="{% url 'profile' %}">Profile</a>
           </li>
           <li class="hide-bg">
-            <a href="edit-profile.html">Settings</a>
+            <a href="edit-{% url 'update-profile' %}">Settings</a>
           </li>
           <li class="hide-bg">
-            <a href="login.html">Logout</a>
+            <a href="{% url 'sign-in' %}">Logout</a>
           </li>
         </ul>
 
@@ -42,13 +42,13 @@
           </span>
           <ul class="dropdown-menu">
             <li>
-              <a class="dropdown-item" href="profile.html">Profile</a>
+              <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
             </li>
             <li>
-              <a class="dropdown-item" href="edit-profile.html">Settings</a>
+              <a class="dropdown-item" href="{% url 'update-profile' %}">Settings</a>
             </li>
             <li>
-              <a class="dropdown-item" href="login.html">Logout</a>
+              <a class="dropdown-item" href="{% url 'sign-in' %}">Logout</a>
             </li>
           </ul>
         </div>

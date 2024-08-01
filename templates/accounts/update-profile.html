@@ -1,0 +1,48 @@
+{% extends "base.html" %} {% block content %}
+<!-- Content -->
+<div class="content-body">
+  <div class="container">
+    <div class="row">
+      <!-- Edit Profile Form -->
+      <div class="col-lg-6 m-auto">
+        <div class="card form-card">
+          <div class="card-body">
+            <h3 class="text-center">Edit Profile</h3>
+            <form class="custom_form">
+              <div class="mb-2">
+                <label>First Name</label>
+                <input class="form-control" placeholder="First Name" />
+              </div>
+              <div class="mb-2">
+                <label>Last Name</label>
+                <input class="form-control" placeholder="Last Name" />
+              </div>
+              <div class="mb-2">
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="Email" />
+              </div>
+              <div class="mb-2">
+                <label>Username</label>
+                <input class="form-control" placeholder="@username" />
+              </div>
+              <div class="mb-2">
+                <label>Avatar</label>
+                <input type="file" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label>Bio</label>
+                <textarea
+                  class="form-control"
+                  rows="4"
+                  placeholder="About yourself..."
+                ></textarea>
+              </div>
+              <button class="btn btn-primary btn-md w-100">Save Profile</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
