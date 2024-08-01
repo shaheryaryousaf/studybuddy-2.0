@@ -62,147 +62,18 @@
           </div>
           <a
             class="btn btn-primary btn-md d-flex align-items-center gap-2"
-            href="create-room.html"
+            href="{% url 'create-room' %}"
             ><i class="fa-solid fa-plus"></i><span>Create Room</span></a
           >
         </div>
 
         <div class="feed_list">
           <!-- Single Feed -->
-          <div class="single_feed">
-            <div
-              class="listing_meta d-flex justify-content-between align-items-center"
-            >
-              <div class="user d-flex align-items-center gap-2">
-                <img
-                  src="{% static 'images/avatar.png' %}"
-                  class="img-fluid"
-                  alt="avatar"
-                  width="30px"
-                />
-                <div>
-                  <p class="name mb-0">
-                    <a href="profile.html">@JohnWick</a>
-                  </p>
-                  <p class="info mb-0">1 hour ago</p>
-                </div>
-              </div>
-              <div class="time">25 minutes ago</div>
-            </div>
-            <div class="title">
-              <h4>
-                <a href="single-room.html">VueJS Developers Assemble</a>
-              </h4>
-            </div>
-            <div class="detail">
-              <p class="mb-0">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas explicabo veritatis cumque error est ipsam vel eos
-                perferendis hic autem maxime quia omnis pariatur corrupti,
-                blanditiis fuga? Corporis, exercitationem odio!
-              </p>
-            </div>
-            <div
-              class="stats d-flex justify-content-between align-items-center"
-            >
-              <div class="users d-flex align-items-center gap-2">
-                <i class="fa-solid fa-users"></i><span>7 Joined</span>
-              </div>
-              <div class="cat">
-                <p class="mb-0"><a href="#">VueJS</a></p>
-              </div>
-            </div>
-          </div>
+          {% include 'components/rooms/singleRoom.html' %}
           <!-- Single Feed -->
-          <div class="single_feed">
-            <div
-              class="listing_meta d-flex justify-content-between align-items-center"
-            >
-              <div class="user d-flex align-items-center gap-2">
-                <img
-                  src="{% static 'images/avatar.png' %}"
-                  class="img-fluid"
-                  alt="avatar"
-                  width="30px"
-                />
-                <div>
-                  <p class="name mb-0">
-                    <a href="profile.html">@JohnWick</a>
-                  </p>
-                  <p class="info mb-0">1 hour ago</p>
-                </div>
-              </div>
-              <div class="time">25 minutes ago</div>
-            </div>
-            <div class="title">
-              <h4>
-                <a href="single-room.html">VueJS Developers Assemble</a>
-              </h4>
-            </div>
-            <div class="detail">
-              <p class="mb-0">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas explicabo veritatis cumque error est ipsam vel eos
-                perferendis hic autem maxime quia omnis pariatur corrupti,
-                blanditiis fuga? Corporis, exercitationem odio!
-              </p>
-            </div>
-            <div
-              class="stats d-flex justify-content-between align-items-center"
-            >
-              <div class="users d-flex align-items-center gap-2">
-                <i class="fa-solid fa-users"></i><span>7 Joined</span>
-              </div>
-              <div class="cat">
-                <p class="mb-0"><a href="#">VueJS</a></p>
-              </div>
-            </div>
-          </div>
+          {% include 'components/rooms/singleRoom.html' %}
           <!-- Single Feed -->
-          <div class="single_feed">
-            <div
-              class="listing_meta d-flex justify-content-between align-items-center"
-            >
-              <div class="user d-flex align-items-center gap-2">
-                <img
-                  src="{% static 'images/avatar.png' %}"
-                  class="img-fluid"
-                  alt="avatar"
-                  width="30px"
-                />
-                <div>
-                  <p class="name mb-0">
-                    <a href="profile.html">@JohnWick</a>
-                  </p>
-                  <p class="info mb-0">1 hour ago</p>
-                </div>
-              </div>
-              <div class="time">25 minutes ago</div>
-            </div>
-            <div class="title">
-              <h4>
-                <a href="single-room.html">VueJS Developers Assemble</a>
-              </h4>
-            </div>
-            <div class="detail">
-              <p class="mb-0">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas explicabo veritatis cumque error est ipsam vel eos
-                perferendis hic autem maxime quia omnis pariatur corrupti,
-                blanditiis fuga? Corporis, exercitationem odio!
-              </p>
-            </div>
-            <div
-              class="stats d-flex justify-content-between align-items-center"
-            >
-              <div class="users d-flex align-items-center gap-2">
-                <i class="fa-solid fa-users"></i><span>7 Joined</span>
-              </div>
-              <div class="cat">
-                <p class="mb-0"><a href="#">VueJS</a></p>
-              </div>
-            </div>
-          </div>
+          {% include 'components/rooms/singleRoom.html' %}
         </div>
       </div>
 
@@ -212,146 +83,16 @@
           <h5>Recent Activity</h5>
 
           <!-- Single Activity -->
-          <div class="single_activity my-3">
-            <div class="card">
-              <div class="card-body">
-                <div
-                  class="listing_meta d-flex justify-content-between align-items-center mb-2"
-                >
-                  <div class="user d-flex align-items-center gap-2">
-                    <img
-                      src="{% static 'images/avatar.png' %}"
-                      class="img-fluid"
-                      alt="avatar"
-                      width="30px"
-                    />
-                    <div>
-                      <p class="name mb-0"><a href="#">@JohnWick</a></p>
-                      <p class="info mb-0">1 hour ago</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-text mb-2">
-                  <p class="mb-0">
-                    replied to post: "<a href="#"
-                      >Introduction to Machine Learning</a
-                    >"
-                  </p>
-                </div>
-                <div class="card-text reply">
-                  <p class="mb-0">Please explain with examples in detail.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% include 'components/rooms/activityItem.html' %}
 
           <!-- Single Activity -->
-          <div class="single_activity my-3">
-            <div class="card">
-              <div class="card-body">
-                <div
-                  class="listing_meta d-flex justify-content-between align-items-center mb-2"
-                >
-                  <div class="user d-flex align-items-center gap-2">
-                    <img
-                      src="{% static 'images/avatar.png' %}"
-                      class="img-fluid"
-                      alt="avatar"
-                      width="30px"
-                    />
-                    <div>
-                      <p class="name mb-0">
-                        <a href="profile.html">@JohnWick</a>
-                      </p>
-                      <p class="info mb-0">1 hour ago</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-text mb-2">
-                  <p class="mb-0">
-                    replied to post: "<a href="#"
-                      >Introduction to Machine Learning</a
-                    >"
-                  </p>
-                </div>
-                <div class="card-text reply">
-                  <p class="mb-0">Please explain with examples in detail.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% include 'components/rooms/activityItem.html' %}
 
           <!-- Single Activity -->
-          <div class="single_activity my-3">
-            <div class="card">
-              <div class="card-body">
-                <div
-                  class="listing_meta d-flex justify-content-between align-items-center mb-2"
-                >
-                  <div class="user d-flex align-items-center gap-2">
-                    <img
-                      src="{% static 'images/avatar.png' %}"
-                      class="img-fluid"
-                      alt="avatar"
-                      width="30px"
-                    />
-                    <div>
-                      <p class="name mb-0">
-                        <a href="profile.html">@JohnWick</a>
-                      </p>
-                      <p class="info mb-0">1 hour ago</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-text mb-2">
-                  <p class="mb-0">
-                    replied to post: "<a href="#"
-                      >Introduction to Machine Learning</a
-                    >"
-                  </p>
-                </div>
-                <div class="card-text reply">
-                  <p class="mb-0">Please explain with examples in detail.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% include 'components/rooms/activityItem.html' %}
 
           <!-- Single Activity -->
-          <div class="single_activity my-3">
-            <div class="card">
-              <div class="card-body">
-                <div
-                  class="listing_meta d-flex justify-content-between align-items-center mb-2"
-                >
-                  <div class="user d-flex align-items-center gap-2">
-                    <img
-                      src="{% static 'images/avatar.png' %}"
-                      class="img-fluid"
-                      alt="avatar"
-                      width="30px"
-                    />
-                    <div>
-                      <p class="name mb-0">
-                        <a href="profile.html">@JohnWick</a>
-                      </p>
-                      <p class="info mb-0">1 hour ago</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-text mb-2">
-                  <p class="mb-0">
-                    replied to post: "<a href="#"
-                      >Introduction to Machine Learning</a
-                    >"
-                  </p>
-                </div>
-                <div class="card-text reply">
-                  <p class="mb-0">Please explain with examples in detail.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% include 'components/rooms/activityItem.html' %}
         </div>
       </div>
     </div>
