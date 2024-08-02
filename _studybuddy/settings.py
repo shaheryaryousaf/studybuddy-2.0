@@ -54,6 +54,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "_studybuddy.urls"
 
+AUTH_USER_MODEL = 'accounts.UserAccount'
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/account/signin'
+LOGOUT_REDIRECT_URL = '/account/signin'
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -76,10 +81,20 @@ WSGI_APPLICATION = "_studybuddy.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'StudyBuddy',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'localhost'
     }
 }
 
