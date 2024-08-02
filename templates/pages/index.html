@@ -58,7 +58,7 @@
         >
           <div>
             <h5>Study Rooms</h5>
-            <p class="mb-0">4 rooms available</p>
+            <p class="mb-0">{{rooms.count}} rooms available</p>
           </div>
           <a
             class="btn btn-primary btn-md d-flex align-items-center gap-2"
@@ -68,10 +68,6 @@
         </div>
 
         <div class="feed_list">
-          <!-- Single Feed -->
-          {% include 'components/rooms/singleRoom.html' %}
-          <!-- Single Feed -->
-          {% include 'components/rooms/singleRoom.html' %}
           <!-- Single Feed -->
           {% include 'components/rooms/singleRoom.html' %}
         </div>

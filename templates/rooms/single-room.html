@@ -11,7 +11,7 @@
           <!-- Title -->
           <div class="title mb-4">
             <h4>
-              <a href="single-room.html">VueJS Developers Assemble</a>
+              <a href="single-room.html">{{room.name}}</a>
             </h4>
           </div>
 
@@ -33,17 +33,12 @@
                 <p class="info mb-0">1 hour ago</p>
               </div>
             </div>
-            <div class="time">25 minutes ago</div>
+            <div class="time">{{room.created_at|timesince}} ago</div>
           </div>
 
           <!-- Detail -->
           <div class="detail">
-            <p class="mb-0">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-              explicabo veritatis cumque error est ipsam vel eos perferendis hic
-              autem maxime quia omnis pariatur corrupti, blanditiis fuga?
-              Corporis, exercitationem odio!
-            </p>
+            <p class="mb-0">{{room.description}}</p>
           </div>
 
           <!-- Message Box -->
