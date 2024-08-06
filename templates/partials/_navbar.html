@@ -28,30 +28,41 @@
             <a href="edit-{% url 'update-profile' %}">Settings</a>
           </li>
           <li class="hide-bg">
-            <a href="{% url 'sign-in' %}">Logout</a>
+            <a href="{% url 'logout' %}">Logout</a>
           </li>
         </ul>
 
+        {% if request.user.is_authenticated %}
         <div class="dropdown hide-sm">
           <span
             class="dropdown-toggle"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Welcome Shaheryar
+            Welcome, {{request.user.first_name}}
           </span>
           <ul class="dropdown-menu">
             <li>
               <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
             </li>
             <li>
-              <a class="dropdown-item" href="{% url 'update-profile' %}">Settings</a>
+              <a class="dropdown-item" href="{% url 'update-profile' %}"
+                >Settings</a
+              >
             </li>
             <li>
-              <a class="dropdown-item" href="{% url 'sign-in' %}">Logout</a>
+              <a class="dropdown-item" href="{% url 'update-password' %}"
+                >Update Password</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
             </li>
           </ul>
         </div>
+        {% else %}
+        <a href="{% url 'signin' %}" style="color: white">Login</a>
+        {% endif %}
       </div>
     </div>
   </nav>

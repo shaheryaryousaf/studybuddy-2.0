@@ -1,14 +1,21 @@
-from django.shortcuts import render
-
-
-# Signin
-def signIn(request):
-    return render(request, 'accounts/signin.html')
+from django.shortcuts import render, redirect
+from .forms import UserModelForm
 
 
 # Signup
 def signUp(request):
-    return render(request, 'accounts/signup.html')
+    form = UserModelForm()
+    if request.method == "POST":
+        form = UserModelForm(request.POST)
+        if form.is_valid():
+            f = form.save(commit=False)
+            f.type="user"
+            f.save()
+            return redirect('signin')
+    context = {
+        'form': form
+    }
+    return render(request, 'registration/signup.html', context)
 
 
 # Profile
