@@ -10,7 +10,7 @@
       />
       <div>
         <p class="name mb-0">
-          <a href="{% url 'profile' %}">@JohnWick</a>
+          <a href="{% url 'profile' %}">{{room.host.first_name}} {{room.host.last_name}}</a>
         </p>
         <p class="info mb-0">1 hour ago</p>
       </div>

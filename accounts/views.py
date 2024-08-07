@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
-from .forms import UserModelForm
+from .forms import UserModelForm, ProfileCreateForm
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 
 # Signup
@@ -9,7 +11,7 @@ def signUp(request):
         form = UserModelForm(request.POST)
         if form.is_valid():
             f = form.save(commit=False)
-            f.type="user"
+            f.type = "user"
             f.save()
             return redirect('signin')
     context = {
@@ -20,9 +22,25 @@ def signUp(request):
 
 # Profile
 def userProfile(request):
-    return render(request, 'accounts/profile.html')
+    user = User.objects.get(id=request.user.id)
+    rooms = user.room_set.all()
+    context = {
+        'rooms': rooms
+    }
+    return render(request, 'accounts/profile.html', context)
 
 
 # Update Profile
 def updateProfile(request):
-    return render(request, 'accounts/update-profile.html')
+    form = ProfileCreateForm(instance=request.user.profile)
+    if request.method == "POST":
+        form = ProfileCreateForm(
+            request.POST, request.FILES, instance=request.user.profile)
+        if form.is_valid():
+            form.save()
+            return redirect('/account/update-profile')
+
+    context = {
+        'form': form
+    }
+    return render(request, 'accounts/update-profile.html', context)

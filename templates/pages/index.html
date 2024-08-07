@@ -8,18 +8,11 @@
           <h5>Recent Topics</h5>
           <ul class="list-group topics_list">
             <li class="list-group-item"><a href="#">All</a><span>100</span></li>
+            {% for cat in categories %}
             <li class="list-group-item">
-              <a href="#">JavaScript</a><span>25</span>
+              <a href="#">{{cat.name}}</a><span>25</span>
             </li>
-            <li class="list-group-item">
-              <a href="#">ReactJS</a><span>25</span>
-            </li>
-            <li class="list-group-item">
-              <a href="#">Python</a><span>25</span>
-            </li>
-            <li class="list-group-item">
-              <a href="#">Machine Learning</a><span>25</span>
-            </li>
+            {% endfor %}
           </ul>
         </div>
 

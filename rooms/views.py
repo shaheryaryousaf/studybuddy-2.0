@@ -23,6 +23,6 @@ def createRoom(request):
 def singleRoom(request, id):
     room = Room.objects.get(id=id)
     context = {
-        'room': room
+        'room': room,
     }
     return render(request, 'rooms/single-room.html', context)

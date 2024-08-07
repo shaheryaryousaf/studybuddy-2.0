@@ -2,6 +2,7 @@ from django import forms
 from django.forms import ModelForm
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
+from .models import Profiles
 User = get_user_model()
 
 
@@ -22,3 +23,12 @@ class UserModelForm(UserCreationForm):
         super(UserModelForm, self).__init__(*args, **kwargs)
         self.fields['password1'].widget.attrs['placeholder'] = 'Password'
         self.fields['password2'].widget.attrs['placeholder'] = 'Confirm Password'
+        
+        
+
+# Profile Creation Form
+class ProfileCreateForm(ModelForm):
+    class Meta:
+        model = Profiles
+        fields = '__all__'
+        exclude = ('user',)

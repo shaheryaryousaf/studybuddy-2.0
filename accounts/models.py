@@ -49,4 +49,23 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
         return self.email
 
 
+# ===============================
+# Profile Model
+# ===============================
+class Profiles(models.Model):
+    user = models.OneToOneField(
+        UserAccount, on_delete=models.CASCADE, null=True, related_name='profile')
+    first_name = models.CharField(max_length=255, blank=True, null=True)
+    last_name = models.CharField(max_length=255, blank=True, null=True)
+    email = models.CharField(max_length=255, blank=True, null=True)
+    image = models.ImageField(
+        upload_to='users/%Y/%M/%D/', blank=True, null=True)
+    bio = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.user.first_name
+
+    class Meta:
+        verbose_name_plural = "Profiles"
+
 
