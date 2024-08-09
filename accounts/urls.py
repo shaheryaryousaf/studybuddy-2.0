@@ -9,7 +9,7 @@ urlpatterns = [
     path('signin', auth_views.LoginView.as_view(
         redirect_authenticated_user=True), name='signin'),
     path("logout", LogoutView.as_view(), name='logout'),
-    path('profile', views.userProfile, name="profile"),
+    path('profile/<str:id>', views.userProfile, name="profile"),
     path('update-profile', views.updateProfile, name="update-profile"),
     path('update-password', PasswordChangeView.as_view(), name="update-password"),
     path('password_change_done', PasswordChangeDoneView.as_view(),

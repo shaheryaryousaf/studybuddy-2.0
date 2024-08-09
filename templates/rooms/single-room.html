@@ -11,7 +11,7 @@
           <!-- Title -->
           <div class="title mb-4">
             <h4>
-              <a href="single-room.html">{{room.name}}</a>
+              {{room.name}}
             </h4>
           </div>
 
@@ -28,7 +28,7 @@
               />
               <div>
                 <p class="name mb-0">
-                  <a href="{% url 'profile' %}">@JohnWick</a>
+                  <a href="#">{{room.host.first_name}} {{room.host.last_name}}</a> 
                 </p>
                 <p class="info mb-0">1 hour ago</p>
               </div>
@@ -44,6 +44,8 @@
           <!-- Message Box -->
           <div class="messageBox">
             <div class="messages">
+             {% if messages.count > 0 %}
+             {% for m in messages %}
               <!-- Single Message -->
               <div class="single_message">
                 <div class="user d-flex align-items-center gap-2">
@@ -54,199 +56,29 @@
                     width="30px"
                   />
                   <div>
-                    <p class="name mb-0"><a href="#">@JohnWick</a></p>
-                    <p class="info mb-0">1 hour ago</p>
+                    <p class="name mb-0"><a href="#">{{m.user.first_name}}</a></p>
+                    <p class="info mb-0">{{m.created_at|timesince}}</p>
                   </div>
                 </div>
                 <p class="message mb-0">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Necessitatibus nam at praesentium provident optio ullam
-                  accusantium! Quasi voluptatum corrupti hic dolorem suscipit?
-                  Itaque aspernatur quas culpa quasi numquam alias enim?
+                  {{m.body}}
                 </p>
               </div>
+             {% endfor %}
+             {% else %}
+             <p>No messages found.</p>
+             {% endif %}
 
-              <!-- Single Message -->
-              <div class="single_message">
-                <div class="user d-flex align-items-center gap-2">
-                  <img
-                    src="{% static 'images/avatar.png' %}"
-                    class="img-fluid"
-                    alt="avatar"
-                    width="30px"
-                  />
-                  <div>
-                    <p class="name mb-0"><a href="#">@JohnWick</a></p>
-                    <p class="info mb-0">1 hour ago</p>
-                  </div>
-                </div>
-                <p class="message mb-0">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Necessitatibus nam at praesentium provident optio ullam
-                  accusantium! Quasi voluptatum corrupti hic dolorem suscipit?
-                  Itaque aspernatur quas culpa quasi numquam alias enim?
-                </p>
-              </div>
-
-              <!-- Single Message -->
-              <div class="single_message">
-                <div class="user d-flex align-items-center gap-2">
-                  <img
-                    src="{% static 'images/avatar.png' %}"
-                    class="img-fluid"
-                    alt="avatar"
-                    width="30px"
-                  />
-                  <div>
-                    <p class="name mb-0"><a href="#">@JohnWick</a></p>
-                    <p class="info mb-0">1 hour ago</p>
-                  </div>
-                </div>
-                <p class="message mb-0">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Necessitatibus nam at praesentium provident optio ullam
-                  accusantium! Quasi voluptatum corrupti hic dolorem suscipit?
-                  Itaque aspernatur quas culpa quasi numquam alias enim?
-                </p>
-              </div>
-
-              <!-- Single Message -->
-              <div class="single_message">
-                <div class="user d-flex align-items-center gap-2">
-                  <img
-                    src="{% static 'images/avatar.png' %}"
-                    class="img-fluid"
-                    alt="avatar"
-                    width="30px"
-                  />
-                  <div>
-                    <p class="name mb-0"><a href="#">@JohnWick</a></p>
-                    <p class="info mb-0">1 hour ago</p>
-                  </div>
-                </div>
-                <p class="message mb-0">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Necessitatibus nam at praesentium provident optio ullam
-                  accusantium! Quasi voluptatum corrupti hic dolorem suscipit?
-                  Itaque aspernatur quas culpa quasi numquam alias enim?
-                </p>
-              </div>
-
-              <!-- Single Message -->
-              <div class="single_message">
-                <div class="user d-flex align-items-center gap-2">
-                  <img
-                    src="{% static 'images/avatar.png' %}"
-                    class="img-fluid"
-                    alt="avatar"
-                    width="30px"
-                  />
-                  <div>
-                    <p class="name mb-0"><a href="#">@JohnWick</a></p>
-                    <p class="info mb-0">1 hour ago</p>
-                  </div>
-                </div>
-                <p class="message mb-0">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Necessitatibus nam at praesentium provident optio ullam
-                  accusantium! Quasi voluptatum corrupti hic dolorem suscipit?
-                  Itaque aspernatur quas culpa quasi numquam alias enim?
-                </p>
-              </div>
-
-              <!-- Single Message -->
-              <div class="single_message">
-                <div class="user d-flex align-items-center gap-2">
-                  <img
-                    src="{% static 'images/avatar.png' %}"
-                    class="img-fluid"
-                    alt="avatar"
-                    width="30px"
-                  />
-                  <div>
-                    <p class="name mb-0"><a href="#">@JohnWick</a></p>
-                    <p class="info mb-0">1 hour ago</p>
-                  </div>
-                </div>
-                <p class="message mb-0">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Necessitatibus nam at praesentium provident optio ullam
-                  accusantium! Quasi voluptatum corrupti hic dolorem suscipit?
-                  Itaque aspernatur quas culpa quasi numquam alias enim?
-                </p>
-              </div>
-
-              <!-- Single Message -->
-              <div class="single_message">
-                <div class="user d-flex align-items-center gap-2">
-                  <img
-                    src="{% static 'images/avatar.png' %}"
-                    class="img-fluid"
-                    alt="avatar"
-                    width="30px"
-                  />
-                  <div>
-                    <p class="name mb-0"><a href="#">@JohnWick</a></p>
-                    <p class="info mb-0">1 hour ago</p>
-                  </div>
-                </div>
-                <p class="message mb-0">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Necessitatibus nam at praesentium provident optio ullam
-                  accusantium! Quasi voluptatum corrupti hic dolorem suscipit?
-                  Itaque aspernatur quas culpa quasi numquam alias enim?
-                </p>
-              </div>
-
-              <!-- Single Message -->
-              <div class="single_message">
-                <div class="user d-flex align-items-center gap-2">
-                  <img
-                    src="{% static 'images/avatar.png' %}"
-                    class="img-fluid"
-                    alt="avatar"
-                    width="30px"
-                  />
-                  <div>
-                    <p class="name mb-0"><a href="#">@JohnWick</a></p>
-                    <p class="info mb-0">1 hour ago</p>
-                  </div>
-                </div>
-                <p class="message mb-0">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Necessitatibus nam at praesentium provident optio ullam
-                  accusantium! Quasi voluptatum corrupti hic dolorem suscipit?
-                  Itaque aspernatur quas culpa quasi numquam alias enim?
-                </p>
-              </div>
-
-              <!-- Single Message -->
-              <div class="single_message">
-                <div class="user d-flex align-items-center gap-2">
-                  <img
-                    src="{% static 'images/avatar.png' %}"
-                    class="img-fluid"
-                    alt="avatar"
-                    width="30px"
-                  />
-                  <div>
-                    <p class="name mb-0"><a href="#">@JohnWick</a></p>
-                    <p class="info mb-0">1 hour ago</p>
-                  </div>
-                </div>
-                <p class="message mb-0">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Necessitatibus nam at praesentium provident optio ullam
-                  accusantium! Quasi voluptatum corrupti hic dolorem suscipit?
-                  Itaque aspernatur quas culpa quasi numquam alias enim?
-                </p>
-              </div>
             </div>
 
             <!-- Form -->
-            <form>
-              <input class="form-control" placeholder="Enter your message..." />
+            {% if request.user.is_authenticated %}
+            <form method="POSt">
+              {% csrf_token %}
+              <input name="body" class="form-control" placeholder="Enter your message..." />
+              <small>You can join room by commenting</small>
             </form>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -263,46 +95,25 @@
                 <div
                   class="listing_meta d-flex justify-content-between flex-column mb-0"
                 >
-                  <!-- Single Participant -->
-                  <div class="user d-flex align-items-center gap-2 mb-3">
-                    <img
-                      src="{% static 'images/avatar.png' %}"
-                      class="img-fluid"
-                      alt="avatar"
-                      width="30px"
-                    />
-                    <div>
-                      <p class="name mb-0"><a href="#">@JohnWick</a></p>
-                      <p class="info mb-0">1 hour ago</p>
-                    </div>
-                  </div>
-
-                  <!-- Single Participant -->
-                  <div class="user d-flex align-items-center gap-2 mb-3">
-                    <img
-                      src="{% static 'images/avatar.png' %}"
-                      class="img-fluid"
-                      alt="avatar"
-                      width="30px"
-                    />
-                    <div>
-                      <p class="name mb-0"><a href="#">@JohnWick</a></p>
-                      <p class="info mb-0">1 hour ago</p>
-                    </div>
-                  </div>
-                  <!-- Single Participant -->
-                  <div class="user d-flex align-items-center gap-2">
-                    <img
-                      src="{% static 'images/avatar.png' %}"
-                      class="img-fluid"
-                      alt="avatar"
-                      width="30px"
-                    />
-                    <div>
-                      <p class="name mb-0"><a href="#">@JohnWick</a></p>
-                      <p class="info mb-0">1 hour ago</p>
-                    </div>
-                  </div>
+               {% if participants.count > 0 %}
+               {% for p in participants %}
+               <!-- Single Participant -->
+               <div class="user d-flex align-items-center gap-2 mb-3">
+                 <img
+                   src="{% static 'images/avatar.png' %}"
+                   class="img-fluid"
+                   alt="avatar"
+                   width="30px"
+                 />
+                 <div>
+                   <p class="name mb-0"><a href="#">{{p.first_name}}</a></p>
+                   <p class="info mb-0">1 hour ago</p>
+                 </div>
+               </div>
+             {% endfor %}
+               {% else %}
+               <p class="mb-0">This room has no participants</p>
+               {% endif %}
                 </div>
               </div>
             </div>

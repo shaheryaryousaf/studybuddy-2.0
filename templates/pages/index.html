@@ -7,10 +7,10 @@
         <div class="hide-sm">
           <h5>Recent Topics</h5>
           <ul class="list-group topics_list">
-            <li class="list-group-item"><a href="#">All</a><span>100</span></li>
+            <li class="list-group-item"><a href="{% url 'index' %}">All</a></li>
             {% for cat in categories %}
             <li class="list-group-item">
-              <a href="#">{{cat.name}}</a><span>25</span>
+              <a href="{% url 'index' %}?q={{cat.name}}">{{cat.name}}</a>
             </li>
             {% endfor %}
           </ul>
@@ -53,11 +53,13 @@
             <h5>Study Rooms</h5>
             <p class="mb-0">{{rooms.count}} rooms available</p>
           </div>
+          {% if request.user.is_authenticated %}
           <a
             class="btn btn-primary btn-md d-flex align-items-center gap-2"
             href="{% url 'create-room' %}"
             ><i class="fa-solid fa-plus"></i><span>Create Room</span></a
           >
+          {% endif %}
         </div>
 
         <div class="feed_list">
@@ -74,14 +76,6 @@
           <!-- Single Activity -->
           {% include 'components/rooms/activityItem.html' %}
 
-          <!-- Single Activity -->
-          {% include 'components/rooms/activityItem.html' %}
-
-          <!-- Single Activity -->
-          {% include 'components/rooms/activityItem.html' %}
-
-          <!-- Single Activity -->
-          {% include 'components/rooms/activityItem.html' %}
         </div>
       </div>
     </div>

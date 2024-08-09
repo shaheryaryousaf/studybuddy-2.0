@@ -16,14 +16,14 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <form class="search_form d-flex gap-3 align-items-center">
+            <form class="search_form d-flex gap-3 align-items-center" method="GET" action="{% url 'index' %}">
               <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" placeholder="Search..." class="form-control" />
+              <input placeholder="Search..." type="search" name='q' class="form-control" />
             </form>
           </li>
-          <li class="hide-bg">
+          {% comment %} <li class="hide-bg">
             <a href="{% url 'profile' %}">Profile</a>
-          </li>
+          </li> {% endcomment %}
           <li class="hide-bg">
             <a href="edit-{% url 'update-profile' %}">Settings</a>
           </li>
@@ -42,9 +42,9 @@
             Welcome, {{request.user.first_name}}
           </span>
           <ul class="dropdown-menu">
-            <li>
+            {% comment %} <li>
               <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
-            </li>
+            </li> {% endcomment %}
             <li>
               <a class="dropdown-item" href="{% url 'update-profile' %}"
                 >Settings</a

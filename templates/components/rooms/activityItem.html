@@ -1,6 +1,8 @@
 {% load static %}
 
 <!-- Single Activity -->
+{% if activity %} {% for a in activity %}
+
 <div class="single_activity my-3">
   <div class="card">
     <div class="card-body">
@@ -16,20 +18,20 @@
           />
           <div>
             <p class="name mb-0">
-              <a href="{% url 'profile' %}">@JohnWick</a>
+              <a href="#">{{a.user.first_name}} {{a.user.last_name}}</a>
             </p>
-            <p class="info mb-0">1 hour ago</p>
+            <p class="info mb-0">{{a.created_at|timesince}}</p>
           </div>
         </div>
       </div>
       <div class="card-text mb-2">
-        <p class="mb-0">
-          replied to post: "<a href="#">Introduction to Machine Learning</a>"
-        </p>
+        <p class="mb-0">replied to post: "<a href="#">{{a.room.name}}</a>"</p>
       </div>
       <div class="card-text reply">
-        <p class="mb-0">Please explain with examples in detail.</p>
+        <p class="mb-0">{{a.body}}</p>
       </div>
     </div>
   </div>
 </div>
+
+{% endfor %} {% endif %}

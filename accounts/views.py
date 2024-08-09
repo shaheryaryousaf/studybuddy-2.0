@@ -21,11 +21,12 @@ def signUp(request):
 
 
 # Profile
-def userProfile(request):
-    user = User.objects.get(id=request.user.id)
+def userProfile(request, id):
+    user = User.objects.get(id=id)
     rooms = user.room_set.all()
     context = {
-        'rooms': rooms
+        'rooms': rooms,
+        'user': user
     }
     return render(request, 'accounts/profile.html', context)
 
